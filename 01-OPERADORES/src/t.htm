@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ficha de RPG</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #222;
+        color: white;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .ficha {
+        background: #333;
+        padding: 20px;
+        border-radius: 10px;
+        width: 400px;
+        box-shadow: 0 0 10px black;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    button {
+        margin-top: 15px;
+        width: 100%;
+        padding: 10px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #45a049;
+    }
+
+    .resultado {
+        margin-top: 20px;
+        padding: 10px;
+        background: #444;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div class="ficha">
+    <h1>Ficha de RPG</h1>
+
+    <label>Nome do Personagem</label>
+    <input type="text" id="nome">
+
+    <label>Classe</label>
+    <input type="text" id="classe">
+
+    <label>Nível</label>
+    <input type="number" id="nivel" value="1">
+
+    <label>Vida</label>
+    <input type="number" id="vida" value="100">
+
+    <label>Força</label>
+    <input type="number" id="forca" value="10">
+
+    <label>Destreza</label>
+    <input type="number" id="destreza" value="10">
+
+    <label>Inteligência</label>
+    <input type="number" id="inteligencia" value="10">
+
+    <label>Perícias</label>
+    <textarea id="pericias" rows="4" placeholder="Ex: Espadas, Furtividade, Magia"></textarea>
+
+    <button onclick="salvarFicha()">Salvar Ficha</button>
+
+    <div class="resultado" id="resultado"></div>
+</div>
+
+<script>
+function salvarFicha() {
+    const nome = document.getElementById("nome").value;
+    const classe = document.getElementById("classe").value;
+    const nivel = document.getElementById("nivel").value;
+    const vida = document.getElementById("vida").value;
+    const forca = document.getElementById("forca").value;
+    const destreza = document.getElementById("destreza").value;
+    const inteligencia = document.getElementById("inteligencia").value;
+    const pericias = document.getElementById("pericias").value;
+
+    document.getElementById("resultado").innerHTML = `
+        <h2>${nome}</h2>
+        <p><strong>Classe:</strong> ${classe}</p>
+        <p><strong>Nível:</strong> ${nivel}</p>
+        <p><strong>Vida:</strong> ${vida}</p>
+        <p><strong>Força:</strong> ${forca}</p>
+        <p><strong>Destreza:</strong> ${destreza}</p>
+        <p><strong>Inteligência:</strong> ${inteligencia}</p>
+        <p><strong>Perícias:</strong> ${pericias}</p>
+    `;
+}
+</script>
+
+</body>
+</html>
