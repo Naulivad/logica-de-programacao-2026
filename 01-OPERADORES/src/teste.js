@@ -6,4 +6,4 @@ console.log("Seu nome é: " + teste)
 
 console.log("Caramba vc é burro em.")
  
-var teste2 = teste
+var teste2 = leia.question("haha")
