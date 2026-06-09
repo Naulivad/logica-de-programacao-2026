@@ -24,4 +24,4 @@ if(escolhaUser === -1) {
         console.log("COMPUTADOR GANHOU!!!")
     }
     
-}
+} 
