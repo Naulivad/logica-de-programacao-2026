@@ -287,7 +287,6 @@ import leia from "readline-sync"
 //         var nome = leia.question('Digite seu nome completo: ')
 //         console.log(`${nome}, você pode ir`)
 //     }else if(permissao == 'NAO'){
-//         console.log(`Você NÃO pode ir`)
-//     }
+        // console.log(`Você NÃO pode ir`)
+    // }
 // } 
-
