@@ -1,34 +1,74 @@
 import leia from "readline-sync"
 
-console.log("------DESAFIO DOS FIOS------")
 
-var escolha = leia.keyInSelect(opcoes, 'Escolha uma opcao:')
+// console.log("-------------desafio dos fios-------------")
 
-var fio
+// var fioal = Math.floor(Math.random() * 4) 
 
-if(escolha === 0){
-    fio = branco;
-}else if (escolha === 1){
-    fio = verde
-}else if (escolha === 2){
-    fio = azul
-}else if (escolha === 3){
-    fio = vermelho
-}else{
-    console.log('Operacao cancelada');
-}
+// var tentativas = 5
 
-let fioAleatorio = Math.floor(Math.random() * 4) + 1;
+// do{
+   
+//     var escolha = leia.keyInSelect(
+//         ["branco"," verde", "azul", "vermelho"], 
+//         "escolha uma cor "
+//     )
+//     if(escolha === fioal){
+//         console.log("voce ganhou o jogo era o fio  "+ (fioal +1))
+//         break
+//     }
+//     tentativas--
+//     console.log ("fio errado tente de novo")
+//     console.log("tentativas restantes" + tentativas)
+  
 
-let tentativas = 0
-let limitedeTentativas = 5
+// }while(tentativas > 0)
+//     if(tentativas === 0){
+//         console.log("voce explodiu seu pais ")
+//     }
 
- while(resposta != fioAleatorio && tentativas < limitedeTentativas);
+//professor
 
-if (resposta == numeroAleatorio){
-    console.log("você acertou! o número certo é " + numeroAleatorio);
-    console.log("quantidade de tentativas: " + tentativas);
+console.log("=== DESARME A BOMBA ===")
+console.log("UMA BOMBA FOI IMPLANTADA")
+console.log("VOCE PRECISA CORTAR O FIO EM 3 TENTATIVAS")
+console.log("=======")
 
-} else {
-    console.log("você perdeu, o número correto era: " + numeroAleatorio);
+var fios = [
+    "vermelho", "azul", "verde", "amarelo", "laranja", "rosa"
+]
+
+var fiocorret = fios [Math.floor(Math.random() * fios.length)]
+var tentativas = 3;
+
+var desarmou = false 
+
+do {
+    var escolha = leia.keyInSelect(fios, `escollha um fio para cortar voce tem ${tentativas} tentativas`)
+    var fioescolhido = fios[escolha]
+    
+    if (fioescolhido === fiocorret) {
+        console.log("voce desarmou a bomba")
+        console.log ("parabens")
+
+        desarmou = true
+        
+    } else {
+
+        console.log("voce cortou o fio " + fioescolhido)
+        console.log("esse nao era o fio correto")
+
+        tentativas--
+
+        fios.splice(escolha, 1)
+    }
+
+    console.log ("---------------------------------")
+
+}while (tentativas > 0 && desarmou === false);
+
+
+if (desarmou === false) {
+    console.log ("KABUUUUMMMMM! ")
+    console.log ("o fio correto era " + fiocorret)
 }
