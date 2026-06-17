@@ -19,7 +19,7 @@ import leia from "readline-sync"
 //     }
 //     tentativas--
 //     console.log ("fio errado tente de novo")
-//     console.log("tentativas restantes" + tentativas)
+//     console.log("tentativas restantes " + tentativas)
   
 
 // }while(tentativas > 0)
@@ -29,46 +29,46 @@ import leia from "readline-sync"
 
 //professor
 
-console.log("=== DESARME A BOMBA ===")
-console.log("UMA BOMBA FOI IMPLANTADA")
-console.log("VOCE PRECISA CORTAR O FIO EM 3 TENTATIVAS")
-console.log("=======")
+// console.log("=== DESARME A BOMBA ===")
+// console.log("UMA BOMBA FOI IMPLANTADA")
+// console.log("VOCE PRECISA CORTAR O FIO EM 3 TENTATIVAS")
+// console.log("=======")
 
-var fios = [
-    "vermelho", "azul", "verde", "amarelo", "laranja", "rosa"
-]
+// var fios = [
+//     "vermelho", "azul", "verde", "amarelo", "laranja", "rosa"
+// ]
 
-var fiocorret = fios [Math.floor(Math.random() * fios.length)]
-var tentativas = 3;
+// var fiocorret = fios [Math.floor(Math.random() * fios.length)]
+// var tentativas = 3;
 
-var desarmou = false 
+// var desarmou = false 
 
-do {
-    var escolha = leia.keyInSelect(fios, `escollha um fio para cortar voce tem ${tentativas} tentativas`)
-    var fioescolhido = fios[escolha]
+// do {
+//     var escolha = leia.keyInSelect(fios, `escollha um fio para cortar voce tem ${tentativas} tentativas`)
+//     var fioescolhido = fios[escolha]
     
-    if (fioescolhido === fiocorret) {
-        console.log("voce desarmou a bomba")
-        console.log ("parabens")
+//     if (fioescolhido === fiocorret) {
+//         console.log("voce desarmou a bomba")
+//         console.log ("parabens")
 
-        desarmou = true
+//         desarmou = true
         
-    } else {
+//     } else {
 
-        console.log("voce cortou o fio " + fioescolhido)
-        console.log("esse nao era o fio correto")
+//         console.log("voce cortou o fio " + fioescolhido)
+//         console.log("esse nao era o fio correto")
 
-        tentativas--
+//         tentativas--
 
-        fios.splice(escolha, 1)
-    }
+//         fios.splice(escolha, 1)
+//     }
 
-    console.log ("---------------------------------")
+//     console.log ("---------------------------------")
 
-}while (tentativas > 0 && desarmou === false);
+// }while (tentativas > 0 && desarmou === false);
 
 
-if (desarmou === false) {
-    console.log ("KABUUUUMMMMM! ")
-    console.log ("o fio correto era " + fiocorret)
-}
+// if (desarmou === false) {
+//     console.log ("KABUUUUMMMMM! ")
+//     console.log ("o fio correto era " + fiocorret)
+// }

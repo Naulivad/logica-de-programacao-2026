@@ -85,7 +85,7 @@ import leia from "readline-sync"
 //          console.log("BONJUOR!!!")
 //     case "pt" :
 //         console.log("OLÁ!!!")
-    
+
 // }
 // var placa = leia.question("DIGITE A PLACA DE SEU CARRO: ")
 // var ud = placa[placa.length - 1]
@@ -135,7 +135,7 @@ import leia from "readline-sync"
 //     mensag = ud === '8' || ud === '9' ? "SEXTA FEIRA" :
 //     mensag = "NUMERO INVALIDO"
 // console.log(`VOCÊ NÃO PODE RODAR NA ${mensag}`)
-             
+
 // var macascomp = leia.question("QUANTAS MAÇAS VC COMPROU NA LOJA DO SEU ZÉ? ")
 // if(macascomp < 12){
 //     console.log("O PREÇO A SER PAGADO É DE: " + "R$" + macascomp * 0.30)
@@ -287,6 +287,75 @@ import leia from "readline-sync"
 //         var nome = leia.question('Digite seu nome completo: ')
 //         console.log(`${nome}, você pode ir`)
 //     }else if(permissao == 'NAO'){
-        // console.log(`Você NÃO pode ir`)
-    // }
+// console.log(`Você NÃO pode ir`)
+// }
 // } 
+
+//EXERCICIOS SAMANA 12
+
+//1
+
+// var not1 = leia.question("Digite sua nota 1: ")
+// var not2 = leia.question("Digite sua nota 2: ")
+// var not3 = leia.question("Digite sua nota 3: ")
+// var not4 = leia.question("Digite sua nota 4: ")
+// var not5 = leia.question("Digite sua nota 5 ")
+
+// var media = (not1 + not2 + not3 + not4 + not5 / 5)
+
+// var frequencia = leia.question("quantos dia voce foi a escola? ")
+// var diasA = leia.question("quantos dias de aula sua escola teve? ")
+
+// var porc = frequencia * 0.75
+
+// if (media > 7 && porc > diasA){
+//     console.log("PARABENS VOCE PASSOU!!!")
+// }else {
+//     console.log("VOCE NAO PASSOU BOBAO!!!")
+// }
+
+//2
+
+// var quanto = leia.question("quanto voce gastou na loja? ")
+// var vip = leia.keyIn("possui cartao fidelidade? [S/N]: ",{
+//   limit: "sSnN"
+//})
+// if (vip === "S") {
+//     console.log("sim")
+// }else if (vip === "N") {
+//     console.log("no")
+// }else{
+//     console.log("RESPONDA COM 'S' OU 'N'")
+
+// }
+
+// if (vip === "S" && quanto > 1000) {
+
+//     console.log("voce pagara " + (quanto * 0.80) )
+// }else if (vip === "S" || quanto > 500){
+//     console.log("voce pagara " + (quanto * 0.90))
+// }else{
+//     console.log("voce pagara " + (quanto * 0.95))
+// }
+
+var horas = leia.questionInt("quantas horas voce passou no estacionamento? ")
+var cartao = leia.keyInSelect(["SIM", "NAO"], "possui cartao fidelidade?", { cancel: false });
+
+if (horas <= 1) {
+    console.log("voce pagara 8 reais")
+
+}
+if(horas <= 3) {
+    console.log("voce pagara 15 reias")
+
+}
+if(horas <= 6){
+    console.log("voce pagara 22 reais ")
+}
+if(horas > 6){
+    console.log("voce pagara 30 reais")
+}
+
+if(cartao == "1"){
+    horas * 0.85
+}
