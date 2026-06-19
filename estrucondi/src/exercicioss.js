@@ -338,24 +338,45 @@ import leia from "readline-sync"
 //     console.log("voce pagara " + (quanto * 0.95))
 // }
 
-var horas = leia.questionInt("quantas horas voce passou no estacionamento? ")
-var cartao = leia.keyInSelect(["SIM", "NAO"], "possui cartao fidelidade?", { cancel: false });
+// var horas = leia.questionInt("quantas horas voce passou no estacionamento? ")
+// var cartao = leia.keyInSelect(["SIM", "NAO"], "possui cartao fidelidade?", { cancel: false });
 
-if (horas <= 1) {
-    console.log("voce pagara 8 reais")
+// if (horas <= 1) {
+//     console.log("voce pagara 8 reais")
 
-}
-if(horas <= 3) {
-    console.log("voce pagara 15 reias")
+// }
+// if(horas <= 3) {
+//     console.log("voce pagara 15 reias")
 
-}
-if(horas <= 6){
-    console.log("voce pagara 22 reais ")
-}
-if(horas > 6){
-    console.log("voce pagara 30 reais")
-}
+// }
+// if(horas <= 6){
+//     console.log("voce pagara 22 reais ")
+// }
+// if(horas > 6){
+//     console.log("voce pagara 30 reais")
+// }
 
-if(cartao == "1"){
-    horas * 0.85
+// if(cartao == "1"){
+//     horas * 0.85
+// }
+
+// var p11 = leia.question("Qual o valr da sua primeira  barra de ferro? ")
+// var p22 = leia.question("Qual o valr da sua segunda barra de ferro? ")
+// var p33 = leia.question("Qual o valr da sua terceira barra de ferro? ")
+
+// if ((p11 = p22) > p33){
+//     console.log("e possivel fazer um triangulo")
+// } else {
+//     console.log("nao e possivel fazer um triangulo")
+// }
+
+var empret = leia.question("quanto deseja de emprestimo? ")
+var idae = leia.question("digite sua idade: ")
+var sallario = leia.question("digite seus salario: ")
+var nomelimpo = leia.keyInSelect(["SIM", "NAO"], "voce possui o nome limpo?", { cancel: false });
+ 
+if(idae >= 18 && sallario >= 2500 && nomelimpo == 0){
+    console.log("voce pode pegar seu empretimo de " + empret)
+} else {
+    console.log("voce nao pode pegar seu emprestimo")
 }
