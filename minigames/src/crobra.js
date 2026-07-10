@@ -1,8 +1,8 @@
 const PAREDE = "⬜";
 const VAZIO = "⬛";
-const CABECA = "🟢";
+const CABECA = "👽";
 const CORPO = "🟩";
-const COMIDA = "👽";
+const COMIDA = "🔴";
 
 // PLANO CARTESIANO
 
@@ -34,7 +34,24 @@ function desenhar() {
             } else if (x === comidaX && y === comidaY) {
                 linha += COMIDA;
             } else {
-                linha += VAZIO;
+                var desenhoucroba = false;
+
+                for (var i = 0; i < crobraX.length; i++){
+                    if(crobraX[i] === x && crobraY[i] === y){
+                        if(i === 0) {
+                            linha += CABECA;
+                        }else{
+                            linha += CORPO;
+                            desenhoucroba = true
+                        }
+                    }
+
+                    if (desenhoucroba === false){
+                        linha += VAZIO
+                    }
+                    
+                }
+
             }
         }
         tela += linha + "\n" // \N = PULAR LINHA!!! 
@@ -45,3 +62,4 @@ function desenhar() {
 }
 
 desenhar();
+
