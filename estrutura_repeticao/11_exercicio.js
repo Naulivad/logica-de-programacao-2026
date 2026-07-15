@@ -12,7 +12,7 @@ var qtdMulheres = 0;
 
 var qtdHomens = 0;
 
-while (pessoas < 10) {
+while (pessoas < 3) {
 
     var genero = leia.keyInSelect(["F", "M"], "INFORME O GENERO");
     var altura = leia.questionFloat("DIGITE SUA ALTURA: ");
