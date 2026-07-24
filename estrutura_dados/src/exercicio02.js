@@ -1,14 +1,22 @@
-import leia from "readline-sync"
-import { pedirNumeros } from "./utils/pedirNumeros.js";
+import leia from 'readline-sync'
 
-//3
-export function exercicio02(){
-console.log("---EXERCICIO 02---")
-var laele
-var numeros = pedirNumeros(5);
 
-    for (var i = 0; i < numeros.length; i ++){
-    laele = numeros[i] + numeros[i + 1]
-        console.log(laele)
+console.log("----- EXERCICIO 02 -----")
+var resultado = []
+var renkrenk = pedirNumeros(5)
+
+
+for(var i = 0; i < renkrenk.length; i++){
+    
+    
+    var soma = renkrenk[i] 
+    resultado[i] = soma
+    console.log(resultado[i])
 }
-}
+
+
+
+
+
+
+exercicio02()
