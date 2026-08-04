@@ -1,6 +1,6 @@
 import leia from "readline-sync"
 
-// var listaNomes = ["LELECS", "THALES", "NICULAX"]
+// var listaNomes = ["LELECS", "RICK", "NICULAX"]
 
 // console.log(listaNomes);
 // console.log(listaNomes[1]);
@@ -9,7 +9,7 @@ import leia from "readline-sync"
 // //add o 3
 
 // var contador = 3;
-// listaNomes[contador] = "RICK"
+// listaNomes[contador] = "CLAUDIO"
 // console.log(listaNomes[3]);
 
 // //add NO FIM DA LISTA
