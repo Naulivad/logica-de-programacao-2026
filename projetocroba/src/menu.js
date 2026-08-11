@@ -8,8 +8,8 @@ function mostrarMenu() {
     console.log("=============================")
 
     console.log("1 - FACIL")
-    console.log("1 - MEDIO")
-    console.log("1 - DIFICIL")
+    console.log("2 - MEDIO")
+    console.log("3 - DIFICIL")
 
     var opcao = leia.questionInt("Escolha uma opcao: ")
     var dificuldade = DIFICULDADES[opcao]
@@ -24,3 +24,4 @@ function mostrarMenu() {
 }
 
 mostrarMenu();
+
