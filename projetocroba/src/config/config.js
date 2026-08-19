@@ -72,29 +72,3 @@ export const TIPOS_POWER_UP = [
         simbolo: "💎",
     },
 ];
-export const DIFICULDADES = {
-    1: {
-        nome: "Fácil",
-        velocidade: 220,
-        vidas: 5,
-        quantidadeObstaculos: 3,
-        atravessarParede: true,
-        inimigo: false
-    },
-    2: {
-        nome: "Médio",
-        velocidade: 160,
-        vidas: 3,
-        quantidadeObstaculos: 6,
-        atravessarParede: false,
-        inimigo: true
-    },
-    3: {
-        nome: "Dificil",
-        velocidade: 100,
-        vidas: 2,
-        quantidadeObstaculos: 10,
-        atravessarParede: false,
-        inimigo: true
-    }
-}
